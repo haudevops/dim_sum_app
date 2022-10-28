@@ -22,7 +22,7 @@ class _SplashPageState extends State<SplashPage> {
     print('Token UID: $tokenUID');
     if(tokenUID != null){
       Future.delayed(const Duration(seconds: 3),
-              () => {Navigator.pushReplacementNamed(context, HomePage.routeName)});
+              () => {Navigator.pushReplacementNamed(context, NavigatorPage.routeName)});
     }else{
       Future.delayed(const Duration(seconds: 3),
               () => {Navigator.pushReplacementNamed(context, LoginPage.routeName)});

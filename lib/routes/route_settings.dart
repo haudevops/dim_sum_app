@@ -18,6 +18,15 @@ class CustomRouter {
         return SlideLeftRoute(LoginPage());
       case HomePage.routeName:
         return SlideLeftRoute(HomePage());
+        case NavigatorPage.routeName:
+        return SlideLeftRoute(NavigatorPage());
+      case OrderPage.routeName:
+        return SlideLeftRoute(OrderPage());
+      case ProfilePage.routeName:
+        return SlideLeftRoute(ProfilePage());
+      case NotificationPage.routeName:
+        return SlideLeftRoute(NotificationPage());
+
       default:
         throw ('this route name does not exist');
     }
