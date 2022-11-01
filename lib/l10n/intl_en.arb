@@ -29,5 +29,19 @@
   "notification": "Notification",
   "account_has_create": "Account has create",
   "account_create_fail": "Account create fail",
-  "email_wrong_format": "Email wrong format"
+  "email_wrong_format": "Email wrong format",
+  "account_expired": "Account has expired, please try login again",
+  "theme": "Theme",
+  "language": "Language",
+  "setting": "Setting",
+  "vietnamese": "Vietnamese",
+  "english": "English",
+  "function": "Function",
+  "info_user": "Info user",
+  "logout": "Logout",
+  "friends": "Friends",
+  "social": "Social",
+  "home": "Home",
+  "order": "Order",
+  "profile": "Profile"
 }

@@ -26,7 +26,10 @@ class CustomRouter {
         return SlideLeftRoute(ProfilePage());
       case NotificationPage.routeName:
         return SlideLeftRoute(NotificationPage());
-
+      case SettingPage.routeName:
+        return SlideLeftRoute(SettingPage());
+      case InfoPage.routeName:
+        return SlideLeftRoute(InfoPage());
       default:
         throw ('this route name does not exist');
     }

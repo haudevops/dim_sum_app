@@ -119,14 +119,10 @@ class Constants {
   //   OrderStatus.FINISHED_RETURNED: S.current.order_status_finished_returned,
   // };
 
-  static const String ITEM_MENU_HISTORY = 'ITEM_MENU_HISTORY';
-  static const String ITEM_MENU_STATISTICAL = 'ITEM_MENU_STATISTICAL';
-  static const String ITEM_MENU_WALLET = 'ITEM_MENU_WALLET';
-  static const String ITEM_MENU_SHARE_CODE = 'ITEM_MENU_SHARE_CODE';
-  static const String ITEM_MENU_NEWS = 'ITEM_MENU_NEWS';
-  static const String ITEM_MENU_TERMS_POLICY = 'ITEM_MENU_TERMS_POLICY';
-  static const String ITEM_MENU_HELP = 'ITEM_MENU_HELP';
+  static const String ITEM_MENU_INFO = 'ITEM_MENU_INFO';
+  static const String ITEM_MENU_LOGOUT = 'ITEM_MENU_LOGOUT';
   static const String ITEM_MENU_SETTING = 'ITEM_MENU_SETTING';
+  static const String ITEM_MENU_LOGIN = 'ITEM_MENU_LOGIN';
 
   static const String ITEM_SUPPORT_HOTLINE = 'ITEM_SUPPORT_HOTLINE';
   static const String ITEM_SUPPORT_FACEBOOK = 'ITEM_SUPPORT_FACEBOOK';
@@ -137,5 +133,6 @@ class Constants {
 
   static const String STORE_TYPE_FWMP = 'FWMP';
 
-
+  static const double padding = 20;
+  static const double avatarRadius = 45;
 }

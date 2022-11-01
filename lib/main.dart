@@ -32,33 +32,28 @@ class MyApp extends StatelessWidget {
             create: (context) => ThemeProvider(),
           )
         ],
-        child: Builder(
-            builder: (context) => MaterialApp(
-              title: 'Flutter Core Application',
-              debugShowCheckedModeBanner: false,
-              theme: ThemeData(
-                  scaffoldBackgroundColor: const Color(0xFF101010),
-                  appBarTheme: const AppBarTheme(
-                      color: Color(0xFF1F1F1F),
-                      iconTheme: IconThemeData(color: Colors.white)),
-                  bottomNavigationBarTheme:
-                  const BottomNavigationBarThemeData(
-                      backgroundColor: Color(0xFF1F1F1F)),
-                  iconTheme: const IconThemeData(color: Colors.white)),
-              locale: Provider.of<LanguageProvider>(context, listen: true)
-                  .currentLocale,
-              localizationsDelegates: const [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-              supportedLocales: S.delegate.supportedLocales,
-              onGenerateRoute: CustomRouter.allRoutes,
-              home: SplashPage(),
-            )),
+        child: Builder(builder: (context) {
+          final themeProvider = Provider.of<ThemeProvider>(context);
+          return MaterialApp(
+            title: 'Flutter Core Application',
+            debugShowCheckedModeBanner: false,
+            themeMode: themeProvider.themeMode,
+            theme: MyThemes.lightTheme,
+            darkTheme: MyThemes.darkTheme,
+            locale: Provider.of<LanguageProvider>(context, listen: true)
+                .currentLocale,
+            localizationsDelegates: const [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+            onGenerateRoute: CustomRouter.allRoutes,
+            home: SplashPage(),
+          );
+        }),
       ),
     );
   }
 }
-

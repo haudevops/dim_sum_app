@@ -13,4 +13,6 @@ class PrefsCache {
   static const LOCATION_LNG = "LOCATION_LNG";
   static const LOCATION = "LOCATION";
   static const UID = "UID";
+  static const USER = "USER";
+  static const PASSWORD = "PASSWORD";
 }

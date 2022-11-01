@@ -2,6 +2,7 @@ import 'package:dim_sum_app/base/base.dart';
 import 'package:dim_sum_app/generated/l10n.dart';
 import 'package:dim_sum_app/page/page_export.dart';
 import 'package:dim_sum_app/utils/screen_util.dart';
+import 'package:dim_sum_app/widgets/custom_dialog_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,7 +26,8 @@ class _LoginPageState extends BasePageState<LoginPage> {
   String? errorMessage;
   bool isLogin = true;
   late LoginBloc _bloc;
-  final regexEmail = RegExp(r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$");
+  final regexEmail = RegExp(
+      r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$");
 
   void hiddenKeyBoard() {
     Future.delayed(const Duration(),
@@ -34,7 +36,9 @@ class _LoginPageState extends BasePageState<LoginPage> {
 
   void _handleAuth() {
     _bloc.outUID.listen((value) {
-      showDialogRegister(value!.isNotEmpty ? S.current.account_has_create : S.current.account_create_fail);
+      showDialogRegister(value!.isNotEmpty
+          ? S.current.account_has_create
+          : S.current.account_create_fail);
     });
   }
 
@@ -58,7 +62,11 @@ class _LoginPageState extends BasePageState<LoginPage> {
             content: Text(status),
             actions: [
               ElevatedButton(
-                child: Text(S.current.close, style: TextStyle(fontSize: ScreenUtil.getInstance().getAdapterSize(15)),),
+                child: Text(
+                  S.current.close,
+                  style: TextStyle(
+                      fontSize: ScreenUtil.getInstance().getAdapterSize(15)),
+                ),
                 onPressed: () {
                   Navigator.pop(buildContext);
                 },
@@ -75,7 +83,6 @@ class _LoginPageState extends BasePageState<LoginPage> {
       body: Container(
           height: ScreenUtil.getInstance().screenHeight,
           width: ScreenUtil.getInstance().screenWidth,
-          color: Colors.white,
           padding: EdgeInsets.all(ScreenUtil.getInstance().getAdapterSize(60)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -161,6 +168,7 @@ class _LoginPageState extends BasePageState<LoginPage> {
                             password: _passController.text);
                       }
 
+
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content:
@@ -168,6 +176,7 @@ class _LoginPageState extends BasePageState<LoginPage> {
                         duration: const Duration(seconds: 1),
                       ));
                     }
+
                   },
                   child: Text(
                     S.current.register,
@@ -177,7 +186,6 @@ class _LoginPageState extends BasePageState<LoginPage> {
           )),
     );
   }
-
 
   Widget _itemInput(
       {required String hintText,

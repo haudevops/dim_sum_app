@@ -16,25 +16,6 @@ class HomePage extends BasePage {
 }
 
 class _HomePageState extends BasePageState<HomePage> {
-  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
-  final User? user = Auth().currentUser;
-
-  Future<void> signOut() async {
-    final SharedPreferences prefs = await _prefs;
-    await Auth().signOut();
-    prefs.clear();
-    if(!mounted) return;
-    Navigator.pushReplacementNamed(context, SplashPage.routeName);
-  }
-
-  void checkUserExpired() async {
-    final SharedPreferences prefs = await _prefs;
-    if(user?.uid == null){
-      prefs.clear();
-      if(!mounted) return;
-      Navigator.pushReplacementNamed(context, SplashPage.routeName);
-    }
-  }
 
   @override
   Widget buildWidget(BuildContext context) {
@@ -50,15 +31,9 @@ class _HomePageState extends BasePageState<HomePage> {
                 'Home Screen',
                 style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: ScreenUtil.getInstance().getAdapterSize(25),
-                    color: AppColor.colorWhiteDark),
+                    fontSize: ScreenUtil.getInstance().getAdapterSize(25),),
               ),
             ),
-            ElevatedButton(
-                onPressed: () {
-                  signOut();
-                },
-                child: Text('Logout'))
           ],
         ),
       ),
@@ -66,9 +41,7 @@ class _HomePageState extends BasePageState<HomePage> {
   }
 
   @override
-  void onCreate() {
-    checkUserExpired();
-  }
+  void onCreate() {}
 
   @override
   void onDestroy() {

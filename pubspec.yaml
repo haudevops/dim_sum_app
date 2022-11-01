@@ -85,6 +85,7 @@ flutter:
     - assets/img/logo_dim_sum.jpg
     - assets/gif/dim_sum_gif.gif
     - assets/gif/loading_lottie_gif.json
+    - assets/data/user_info_data.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
