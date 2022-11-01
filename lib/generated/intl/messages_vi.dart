@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Quyền truy cập bị từ chối."),
         "account_create_fail": MessageLookupByLibrary.simpleMessage(
             "Tài khoản đăng ký Thất bại"),
+        "account_expired": MessageLookupByLibrary.simpleMessage(
+            "Phiên bản đăng nhập hết hạn, vui lòng đăng nhập lại"),
         "account_has_create": MessageLookupByLibrary.simpleMessage(
             "Tài khoản đăng ký thành công, vui lòng đăng nhập lại"),
         "an_unknown_error":
@@ -41,8 +43,15 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Không hỗ trợ yêu cầu giao thức HTTP"),
         "email_wrong_format":
             MessageLookupByLibrary.simpleMessage("Email sai định dạng"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "friends": MessageLookupByLibrary.simpleMessage("Bạn bè"),
+        "function": MessageLookupByLibrary.simpleMessage("Chức năng"),
+        "home": MessageLookupByLibrary.simpleMessage("Nhà"),
+        "info_user":
+            MessageLookupByLibrary.simpleMessage("Thông tin người dùng"),
         "invalid_request":
             MessageLookupByLibrary.simpleMessage("Yêu cầu không hợp lệ"),
+        "language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "load_more_fail": MessageLookupByLibrary.simpleMessage(
             "Tải thất bại, vui lòng thử lại."),
         "load_more_no_more":
@@ -51,12 +60,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "load_more_wait_moment": MessageLookupByLibrary.simpleMessage(
             "Đang tải, chờ trong giây lát"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
+        "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
         "method_not_allowed": MessageLookupByLibrary.simpleMessage(
             "Phương thức không được phép."),
         "no_network_connection":
             MessageLookupByLibrary.simpleMessage("Không có kết nối mạng"),
         "notification": MessageLookupByLibrary.simpleMessage("Thông báo"),
+        "order": MessageLookupByLibrary.simpleMessage("Đơn hàng"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
+        "profile": MessageLookupByLibrary.simpleMessage("Cá nhân"),
         "receive_timed_out": MessageLookupByLibrary.simpleMessage(
             "Đã hết thời gian nhận phản hồi."),
         "register": MessageLookupByLibrary.simpleMessage("Đăng ký"),
@@ -66,15 +78,19 @@ class MessageLookup extends MessageLookupByLibrary {
             "Yêu cầu đã hết thời gian chờ."),
         "server_internal_error":
             MessageLookupByLibrary.simpleMessage("Lỗi máy chủ."),
+        "setting": MessageLookupByLibrary.simpleMessage("Cài đặt"),
+        "social": MessageLookupByLibrary.simpleMessage("Giải trí"),
         "syntax_error_request":
             MessageLookupByLibrary.simpleMessage("Yêu cầu lỗi cú pháp."),
         "the_server_has_crashed":
             MessageLookupByLibrary.simpleMessage("Máy chủ đang bảo trì"),
         "the_server_refused_to_execute":
             MessageLookupByLibrary.simpleMessage("Máy chủ từ chối thực thi."),
+        "theme": MessageLookupByLibrary.simpleMessage("Giao diện"),
         "userName": MessageLookupByLibrary.simpleMessage("Tên đăng nhập"),
         "username_and_password_not_empty": MessageLookupByLibrary.simpleMessage(
             "Tài khoản và mật khẩu không được trống"),
+        "vietnamese": MessageLookupByLibrary.simpleMessage("Tiếng Việt"),
         "welcome": MessageLookupByLibrary.simpleMessage("Chào mừng")
       };
 }

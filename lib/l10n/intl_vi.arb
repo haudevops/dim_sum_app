@@ -29,5 +29,19 @@
   "notification": "Thông báo",
   "account_has_create": "Tài khoản đăng ký thành công, vui lòng đăng nhập lại",
   "account_create_fail": "Tài khoản đăng ký Thất bại",
-  "email_wrong_format": "Email sai định dạng"
+  "email_wrong_format": "Email sai định dạng",
+  "account_expired": "Phiên bản đăng nhập hết hạn, vui lòng đăng nhập lại",
+  "theme": "Giao diện",
+  "language": "Ngôn ngữ",
+  "setting": "Cài đặt",
+  "vietnamese": "Tiếng Việt",
+  "english": "English",
+  "function": "Chức năng",
+  "info_user": "Thông tin người dùng",
+  "logout": "Đăng xuất",
+  "friends": "Bạn bè",
+  "social": "Giải trí",
+  "home": "Nhà",
+  "order": "Đơn hàng",
+  "profile": "Cá nhân"
 }

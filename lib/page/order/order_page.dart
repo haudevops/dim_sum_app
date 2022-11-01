@@ -1,22 +1,19 @@
 import 'package:dim_sum_app/base/base.dart';
-import 'package:dim_sum_app/data/services/auth.dart';
+import 'package:dim_sum_app/generated/l10n.dart';
 import 'package:dim_sum_app/page/page_export.dart';
-import 'package:dim_sum_app/res/colors.dart';
 import 'package:dim_sum_app/utils/screen_util.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-class HomePage extends BasePage {
-  HomePage({Key? key}) : super(bloc: HomeBloc());
+class OrderPage extends BasePage {
+  OrderPage({Key? key}) : super(bloc: OrderBloc());
+  static const routeName = '/OrderPage';
 
   @override
-  BasePageState<BasePage<BaseBloc>> getState() => _HomePageState();
-  static const routeName = '/HomePage';
+  BasePageState<BasePage<BaseBloc>> getState() => _OrderPageState();
+
 }
 
-class _HomePageState extends BasePageState<HomePage> {
-
+class _OrderPageState extends BasePageState<OrderPage> {
   @override
   Widget buildWidget(BuildContext context) {
     return Scaffold(
@@ -28,10 +25,10 @@ class _HomePageState extends BasePageState<HomePage> {
           children: [
             Center(
               child: Text(
-                'Home Screen',
+                S.current.order,
                 style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: ScreenUtil.getInstance().getAdapterSize(25),),
+                  fontWeight: FontWeight.w600,
+                  fontSize: ScreenUtil.getInstance().getAdapterSize(25),),
               ),
             ),
           ],
@@ -41,10 +38,13 @@ class _HomePageState extends BasePageState<HomePage> {
   }
 
   @override
-  void onCreate() {}
+  void onCreate() {
+    // TODO: implement onCreate
+  }
 
   @override
   void onDestroy() {
     // TODO: implement onDestroy
   }
+
 }

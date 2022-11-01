@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "access_denied": MessageLookupByLibrary.simpleMessage("Access denied"),
         "account_create_fail":
             MessageLookupByLibrary.simpleMessage("Account create fail"),
+        "account_expired": MessageLookupByLibrary.simpleMessage(
+            "Account has expired, please try login again"),
         "account_has_create":
             MessageLookupByLibrary.simpleMessage("Account has create"),
         "an_unknown_error":
@@ -40,8 +42,14 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Does not support HTTP protocol requests"),
         "email_wrong_format":
             MessageLookupByLibrary.simpleMessage("Email wrong format"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "friends": MessageLookupByLibrary.simpleMessage("Friends"),
+        "function": MessageLookupByLibrary.simpleMessage("Function"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "info_user": MessageLookupByLibrary.simpleMessage("Info user"),
         "invalid_request":
             MessageLookupByLibrary.simpleMessage("Invalid request"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "load_more_fail":
             MessageLookupByLibrary.simpleMessage("Load fail, tap to retry"),
         "load_more_no_more":
@@ -51,12 +59,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "load_more_wait_moment": MessageLookupByLibrary.simpleMessage(
             "Loading, wait for moment ..."),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "method_not_allowed":
             MessageLookupByLibrary.simpleMessage("Method not allowed."),
         "no_network_connection":
             MessageLookupByLibrary.simpleMessage("No network connection"),
         "notification": MessageLookupByLibrary.simpleMessage("Notification"),
+        "order": MessageLookupByLibrary.simpleMessage("Order"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "receive_timed_out":
             MessageLookupByLibrary.simpleMessage("Receive timeout"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
@@ -66,15 +77,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Request timed out."),
         "server_internal_error":
             MessageLookupByLibrary.simpleMessage("Server internal error"),
+        "setting": MessageLookupByLibrary.simpleMessage("Setting"),
+        "social": MessageLookupByLibrary.simpleMessage("Social"),
         "syntax_error_request":
             MessageLookupByLibrary.simpleMessage("Syntax error request"),
         "the_server_has_crashed":
             MessageLookupByLibrary.simpleMessage("The server has crashed"),
         "the_server_refused_to_execute": MessageLookupByLibrary.simpleMessage(
             "The server refused to execute."),
+        "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "userName": MessageLookupByLibrary.simpleMessage("UserName"),
         "username_and_password_not_empty": MessageLookupByLibrary.simpleMessage(
             "Username and password not empty"),
+        "vietnamese": MessageLookupByLibrary.simpleMessage("Vietnamese"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
       };
 }
