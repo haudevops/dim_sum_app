@@ -50,7 +50,15 @@ class _NavigatorPageState extends BasePageState<NavigatorPage> {
   @override
   Widget buildWidget(BuildContext context) {
     return Scaffold(
-      body: _navigateToScreen(_selectedIndex),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: [
+          HomePage(),
+          OrderPage(),
+          NotificationPage(),
+          ProfilePage(),
+        ],
+      ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: Colors.white,
