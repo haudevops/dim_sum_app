@@ -70,43 +70,41 @@ class _NavigatorPageState extends BasePageState<NavigatorPage> {
           ],
         ),
         child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
-            child: GNav(
-              rippleColor: Colors.grey[300]!,
-              hoverColor: Colors.grey[100]!,
-              gap: 8,
-              activeColor: Colors.black,
-              iconSize: 24,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              duration: const Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.grey[100]!,
-              color: Colors.black,
-              tabs: [
-                GButton(
-                  icon: Icons.home,
-                  text: S.current.home,
-                ),
-                GButton(
-                  icon: Icons.ac_unit,
-                  text: S.current.order,
-                ),
-                GButton(
-                  icon: Icons.notifications,
-                  text: S.current.notification,
-                ),
-                GButton(
-                  icon: Icons.person,
-                  text: S.current.profile,
-                ),
-              ],
-              selectedIndex: _selectedIndex,
-              onTabChange: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
-              },
-            ),
+          child: GNav(
+            rippleColor: Colors.grey[300]!,
+            hoverColor: Colors.grey[100]!,
+            gap: 8,
+            activeColor: Colors.black,
+            iconSize: 24,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            duration: const Duration(milliseconds: 400),
+            tabBackgroundColor: Colors.grey[100]!,
+            color: Colors.black,
+            backgroundColor: Theme.of(context).bottomAppBarColor,
+            tabs: [
+              GButton(
+                icon: Icons.home,
+                text: S.current.home,
+              ),
+              GButton(
+                icon: Icons.ac_unit,
+                text: S.current.order,
+              ),
+              GButton(
+                icon: Icons.notifications,
+                text: S.current.notification,
+              ),
+              GButton(
+                icon: Icons.person,
+                text: S.current.profile,
+              ),
+            ],
+            selectedIndex: _selectedIndex,
+            onTabChange: (index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
           ),
         ),
       ),
